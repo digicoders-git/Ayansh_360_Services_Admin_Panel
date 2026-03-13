@@ -11,6 +11,7 @@ const Work = () => {
   const [editingId, setEditingId] = useState(null);
   const [formData, setFormData] = useState({ title: "", category: "", image: null });
   const [imagePreview, setImagePreview] = useState(null);
+  const imageUrl = import.meta.env.VITE_IMAGE_URL || 'http://localhost:5000';
 
   const categories = ["Construction", "Painting", "Waterproofing", "Renovation", "Commercial"];
 
@@ -211,7 +212,7 @@ const Work = () => {
           <div key={project._id} className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all">
             <div className="relative h-48 bg-slate-100 overflow-hidden">
               {project.image ? (
-                <img src={`http://localhost:5000${project.image}`} alt={project.title} className="w-full h-full object-cover" />
+                <img src={`${imageUrl}${project.image}`} alt={project.title} className="w-full h-full object-cover" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-slate-400">
                   <FaImage className="text-4xl" />

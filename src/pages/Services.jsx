@@ -11,6 +11,7 @@ const Services = () => {
   const [editingId, setEditingId] = useState(null);
   const [formData, setFormData] = useState({ title: "", desc: "", image: null });
   const [imagePreview, setImagePreview] = useState(null);
+  const imageUrl = import.meta.env.VITE_IMAGE_URL || 'http://localhost:5000';
 
   useEffect(() => {
     fetchServices();
@@ -206,7 +207,7 @@ const Services = () => {
           <div key={service._id} className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all">
             <div className="relative h-48 bg-slate-100 overflow-hidden">
               {service.image ? (
-                <img src={`http://localhost:5000${service.image}`} alt={service.title} className="w-full h-full object-cover" />
+                <img src={`${imageUrl}${service.image}`} alt={service.title} className="w-full h-full object-cover" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-slate-400">
                   <FaImage className="text-4xl" />
