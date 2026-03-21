@@ -33,7 +33,7 @@ const Sidebar = ({
     routes,
     currentPath,
     user,
-    logout,
+    new_logout,
 }) => {
     const visibleRoutes = routes.filter((r) => !r.hide);
 
@@ -93,7 +93,7 @@ const Sidebar = ({
                         </div>
                     </div>
                     <button
-                        onClick={logout}
+                        onClick={new_logout}
                         className="w-full py-2 px-4 rounded-lg flex items-center justify-center gap-2 border border-red-200 text-red-600 hover:bg-red-50 transition-all duration-200"
                     >
                         <FaSignOutAlt />

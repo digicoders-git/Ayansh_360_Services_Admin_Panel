@@ -18,7 +18,7 @@ const routes = [
 
 const DashboardLayout = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const { admin, logout } = useAuth();
+    const { admin, new_logout } = useAuth();
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -29,10 +29,10 @@ const DashboardLayout = () => {
     const toggleSidebar = useCallback(() => setSidebarOpen((prev) => !prev), []);
     const closeSidebar = useCallback(() => setSidebarOpen(false), []);
 
-    const handleLogout = useCallback(() => {
-        logout();
+    const handlenew_logout = useCallback(() => {
+        new_logout();
         navigate("/login", { replace: true });
-    }, [logout, navigate]);
+    }, [new_logout, navigate]);
 
     return (
         <div className="flex h-screen overflow-hidden bg-slate-50 font-sans">
@@ -42,7 +42,7 @@ const DashboardLayout = () => {
                 routes={routes}
                 currentPath={location.pathname}
                 user={admin}
-                logout={handleLogout}
+                new_logout={handlenew_logout}
             />
 
             <div className="flex-1 flex flex-col overflow-hidden">

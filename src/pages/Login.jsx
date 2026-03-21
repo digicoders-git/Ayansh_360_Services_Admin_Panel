@@ -44,8 +44,8 @@ const Login = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-2xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
-          <img src="logo.png" className="h-28 rounded-full mx-auto mb-5" alt="logo" />
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">AYANSH 360</h1>
+          <img src="new_logo.png" className="h-28 rounded-full mx-auto mb-5" alt="new_logo" />
+          <h1 className="text-4xl font-bold text-gray-800 mb-2">AAYANSH 360</h1>
           <p className="text-gray-600">Admin Panel</p>
         </div>
 
